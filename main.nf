@@ -41,7 +41,7 @@ process run_msings{
     echo $tumour_bam > path_to_bams
     /tmp/msings/scripts/run_msings2.sh path_to_bams /tmp/msings/doc/mSINGS_TCGA.bed /tmp/msings/doc/mSINGS_TCGA.baseline ${genome_fa}
     mkdir ${params.sample}
-    mv *.txt > ${params.sample}/.
+    mv *.txt ${params.sample}/.
     tar cvzf ${params.sample}.tar.gz ${params.sample}
     """
 }
