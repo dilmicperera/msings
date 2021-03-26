@@ -38,7 +38,8 @@ process run_msings{
     """
     #!/bin/bash
     export PATH="$PATH:/usr/bin/samtools-1.9"
-    echo $tumour_bam > path_to_bams
+    cp $tumour_bam > /tmp/msings/$tumour_bam
+    echo /tmp/msings/$tumour_bam > path_to_bams
     /tmp/msings/scripts/run_msings2.sh path_to_bams /tmp/msings/doc/mSINGS_TCGA.bed /tmp/msings/doc/mSINGS_TCGA.baseline ${genome_fa}
     mkdir ${params.sample}
     mv *.txt ${params.sample}/.
