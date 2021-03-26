@@ -33,7 +33,7 @@ process run_msings{
         file genome_fa
         file genome_fa_fai
     output:
-        file "*.tar.gz"
+        file "*"
 
     """
     #!/bin/bash
