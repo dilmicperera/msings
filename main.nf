@@ -36,6 +36,8 @@ process run_msings{
         file "*.tar.gz"
 
     """
+    #!/bin/bash
+    export PATH="$PATH:/usr/bin/samtools-1.9"
     echo $tumour_bam > path_to_bams
     scripts/run_msings2.sh path_to_bams msings/doc/mSINGS_TCGA.bed msings/doc/mSINGS_TCGA.baseline ${genome_fa}
     mkdir ${params.sample}
