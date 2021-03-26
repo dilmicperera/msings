@@ -6,8 +6,8 @@ bam_folder="$params.input_bucket/$params.run_folder_id"
 output_folder="$params.output_bucket/$params.output_folder"
 
 // Read in genome files
-genome_fa = file(params.genome_fa)
-genome_fa_fai = file(params.genome_fa_fai)
+genome_fa = file("s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/WholeGenomeFasta/genome.fa")
+genome_fa_fai = file(""s3://ngi-igenomes/igenomes/Homo_sapiens/UCSC/hg19/Sequence/WholeGenomeFasta/genome.fa.fai)
 
 
 // Read in bam/bai files
